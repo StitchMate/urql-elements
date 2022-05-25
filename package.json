@@ -1,0 +1,57 @@
+{
+  "name": "@seam-dev/urql-elements",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "files": [
+    "dist/*"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "npm run clean && exports src/index.ts src/**/*.tsx src/hooks/*.ts --exports --main index --types --minify",
+    "clean": "rm -rf dist && rm -rf types"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@atomico/exports": "^0.30.0",
+    "@uppercod/vite-meta-url": "^1.5.1",
+    "@uppercod/vite-meta-url-load-css": "^1.2.0",
+    "classnames": "^2.3.1",
+    "tailwindcss": "^3.0.24",
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@atomico/hooks": "^3.43.0",
+    "@urql/core": "^2.5.0",
+    "atomico": "^1.59.0",
+    "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6"
+  },
+  "module": "./dist/index.js",
+  "exports": {
+    "./index": "./dist/index.js",
+    ".": "./dist/index.js",
+    "./urql-client": "./dist/urql-client/urql-client.js",
+    "./useMutation": "./dist/hooks/useMutation.js",
+    "./useQuery": "./dist/hooks/useQuery.js"
+  },
+  "types": "types/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "urql-client": [
+        "./types/urql-client/urql-client.d.ts"
+      ],
+      "index": [
+        "./types/index.d.ts"
+      ],
+      "useMutation": [
+        "./types/hooks/useMutation.d.ts"
+      ],
+      "useQuery": [
+        "./types/hooks/useQuery.d.ts"
+      ]
+    }
+  }
+}

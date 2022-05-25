@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>urql-elements</title>
+    <script async type="module" src="./src/index.ts"></script>
+  </head>
+  <body>
+    <urql-client
+      uri="https://swapi-graphql.netlify.app/.netlify/functions/index"
+    >
+        <hello-world></hello-world>
+    </urql-client>
+  </body>
+</html>
